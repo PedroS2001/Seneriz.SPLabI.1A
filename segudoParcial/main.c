@@ -1,10 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
 #include "utn.h"
 #include "pais.h"
 #include "LinkedList.h"
-#include <string.h>
-#include <time.h>
+#include "informes.h"
+#include "parsers.h"
 
 int menu();
 
@@ -14,6 +17,7 @@ int main()
     srand (time(NULL));
     int opcion;
     char nombreArchivo[20];
+    int carga = 0;
     LinkedList* listaPaises = ll_newLinkedList();
     LinkedList* listaCargada = ll_newLinkedList();
     LinkedList* listaPaisesExitosos;
@@ -25,18 +29,26 @@ int main()
         switch(opcion)
         {
         case 1:
-            utn_getNombre(nombreArchivo,20,"Ingrese el nombre del archivo .csv(sin extension) que quiere cargar: ","Archivo invalido\n",2);
-            if(nombreArchivo != NULL)
+            if(!carga)
             {
-                strcat(nombreArchivo,".csv");
-                if(!controller_loadFromText(nombreArchivo,listaPaises))
+                carga = 1;
+                utn_getNombre(nombreArchivo,20,"Ingrese el nombre del archivo .csv(sin extension) que quiere cargar: ","Archivo invalido\n",2);
+                if(nombreArchivo != NULL)
                 {
-                    printf("\nArchivo cargado con exito\n");
+                    strcat(nombreArchivo,".csv");
+                    if(!controller_loadFromText(nombreArchivo,listaPaises))
+                    {
+                        printf("\nArchivo cargado con exito\n");
+                    }
+                    else
+                    {
+                        printf("Error al cargar el archivo\n");
+                    }
                 }
-                else
-                {
-                    printf("Error al cargar el archivo\n");
-                }
+            }
+            else
+            {
+                printf("Ya se ha cargado el archivo antes\n");
             }
             break;
         case 2:
