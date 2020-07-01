@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1593611104 source:c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1593611104 c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\linkedlist.h
+
+1589037373 source:c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1593612316 source:c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"pais.h"
+	"LinkedList.h"
+	<string.h>
+	<time.h>
+
+1588458158 c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\utn.h
+
+1593612308 c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\pais.h
+	"LinkedList.h"
+
+1593612378 source:c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\pais.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"pais.h"
+	"LinkedList.h"
+	<string.h>
+
