@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1593614273 source:c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\linkedlist.c
+1593614831 source:c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\linkedlist.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -12,14 +12,15 @@
 	<stdlib.h>
 	<string.h>
 
-1593614408 source:c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\main.c
+1593614853 source:c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\main.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
+	<time.h>
 	"utn.h"
 	"pais.h"
 	"LinkedList.h"
-	<string.h>
-	<time.h>
+	"informes.h"
 	"parsers.h"
 
 1588458158 c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\utn.h
@@ -52,4 +53,6 @@
 	"pais.h"
 	"LinkedList.h"
 	<string.h>
+
+1593614497 c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\informes.h
 

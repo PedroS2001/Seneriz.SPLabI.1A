@@ -19,7 +19,7 @@ int main()
     char nombreArchivo[20];
     int carga = 0;
     LinkedList* listaPaises = ll_newLinkedList();
-    LinkedList* listaCargada = ll_newLinkedList();
+    LinkedList* listaCargada;
     LinkedList* listaPaisesExitosos;
     LinkedList* listaPaisesEnElHorno;
 
@@ -64,7 +64,6 @@ int main()
         case 3:
             if(!ll_isEmpty(listaPaises))
             {
-
                 listaCargada = ll_map(listaPaises,cargaDatos);
                 if(listaCargada!= NULL)
                 {

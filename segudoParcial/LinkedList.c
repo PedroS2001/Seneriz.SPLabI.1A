@@ -585,6 +585,15 @@ int ll_sort(LinkedList* this, int (*pFunc)(void*,void*), int order)
 
 /************************/
 
+
+/** \brief mapea los datos de una lista con los valores pasados por funcion
+ *
+ * \param linkedlist a la que se le asignan los valores
+ * \param funcion
+ * \return linkedlist con los valores cargados
+ *
+ */
+
 LinkedList* ll_map(LinkedList* lista, void* (pFunc)(void* element)  )
 {
     LinkedList* listanueva = ll_newLinkedList();
@@ -602,6 +611,13 @@ LinkedList* ll_map(LinkedList* lista, void* (pFunc)(void* element)  )
     return listanueva;
 }
 
+/** \brief filtra algunos elementos de una lista segun la funcion pasada
+ *
+ * \param   linkedlist
+ * \param funcion
+ * \return linkedlist filtrada
+ *
+ */
 
 LinkedList* ll_filter(LinkedList* this, int (*pFunc)(void*))
 {

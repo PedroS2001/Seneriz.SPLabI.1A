@@ -5,6 +5,14 @@
 #include "LinkedList.h"
 #include <string.h>
 
+/** \brief carga un archivo de texto
+ *
+ * \param el archivo
+ * \param   el linkedlist
+ * \return
+ *
+ */
+
 
 int controller_loadFromText(char* path, LinkedList* pArray)
 {
@@ -22,6 +30,14 @@ int controller_loadFromText(char* path, LinkedList* pArray)
     }
     return retorno;
 }
+
+/** \brief agrega a una linkedlist lo que leyo de un archivo de texto
+ *
+ * \param el atchivo
+ * \param la linkedlist en la que deja los datos
+ * \return
+ *
+ */
 
 int parser_paisFromText(FILE* pFile, LinkedList* pArray)
 {
@@ -53,6 +69,15 @@ int parser_paisFromText(FILE* pFile, LinkedList* pArray)
 
     return retorno;
 }
+
+
+/** \brief imprime tododslos paises de la linkedlist
+ *
+ * \param la linkedlist
+ * \param
+ * \return
+ *
+ */
 
 int controller_ListPaises(LinkedList* pArray)
 {
@@ -86,6 +111,13 @@ int controller_ListPaises(LinkedList* pArray)
 }
 
 
+/** \brief guarda la lista en un archivo de texto
+ *
+ * \param  archivo en el que guarda la lista
+ * \param  lista a ser guardada
+ * \return
+ *
+ */
 
 int controller_saveAsText(char* path, LinkedList* pArray)
 {

@@ -55,6 +55,8 @@ this = pais_new();
 }
 
 
+    /**SETTERS Y GETTERS*/
+
 int pais_setId(ePais* this,int id)
 {
     int retorno = -1;
@@ -167,14 +169,23 @@ int pais_getMuertos(ePais* this,int* muertos)
 
 
 
+/** \brief muestra los datos de un solo pais
+ *
+ * \param el pais
+ * \param
+ * \return
+ *
+ */
 
 void mostrarUnPais(ePais* pais)
 {
     printf("%4d  %20s   %8d    %8d%  8d\n",pais->id, pais->nombre, pais->recuperados, pais->infectados, pais->muertos);
 }
 
-
-
+/** \brief carga los datos de los elementos con los valores asignados
+ *
+ * \param elemento al que carga el valor
+ */
 
 void* cargaDatos(void* element )
 {
@@ -187,7 +198,6 @@ void* cargaDatos(void* element )
         retorno->infectados = rand()%(1960000)+40000;
         retorno->recuperados = rand()%(50000)+50000;
         retorno->muertos = rand()%(49000)+1000;
-
     }
     return retorno;
 }
