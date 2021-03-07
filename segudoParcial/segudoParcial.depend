@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1593614831 source:c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\linkedlist.c
+1593615234 source:c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\linkedlist.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -12,7 +12,7 @@
 	<stdlib.h>
 	<string.h>
 
-1593614853 source:c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\main.c
+1594158666 source:c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -28,7 +28,7 @@
 1593614499 c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\pais.h
 	"LinkedList.h"
 
-1593614530 source:c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\pais.c
+1594164622 source:c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\pais.c
 	<stdio.h>
 	<stdlib.h>
 	"utn.h"
@@ -38,7 +38,7 @@
 
 1593614353 c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\parsers.h
 
-1593614373 source:c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\parsers.c
+1593615363 source:c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\parsers.c
 	<stdio.h>
 	<stdlib.h>
 	"utn.h"
@@ -55,4 +55,53 @@
 	<string.h>
 
 1593614497 c:\users\noel\desktop\pedro\1_programacion y laboratorio i\2020\senerizsplab1\seneriz.splabi.1a\segudoparcial\informes.h
+
+1593614542 source:c:\users\pedro\desktop\utn\1_programacion y laboratorio i\2020\parciales\senerizsplab1\seneriz.splabi.1a\segudoparcial\informes.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"pais.h"
+	"LinkedList.h"
+	<string.h>
+
+1588458160 c:\users\pedro\desktop\utn\1_programacion y laboratorio i\2020\parciales\senerizsplab1\seneriz.splabi.1a\segudoparcial\utn.h
+
+1593614500 c:\users\pedro\desktop\utn\1_programacion y laboratorio i\2020\parciales\senerizsplab1\seneriz.splabi.1a\segudoparcial\pais.h
+	"LinkedList.h"
+
+1593614344 c:\users\pedro\desktop\utn\1_programacion y laboratorio i\2020\parciales\senerizsplab1\seneriz.splabi.1a\segudoparcial\linkedlist.h
+
+1593615236 source:c:\users\pedro\desktop\utn\1_programacion y laboratorio i\2020\parciales\senerizsplab1\seneriz.splabi.1a\segudoparcial\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1594158668 source:c:\users\pedro\desktop\utn\1_programacion y laboratorio i\2020\parciales\senerizsplab1\seneriz.splabi.1a\segudoparcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"utn.h"
+	"pais.h"
+	"LinkedList.h"
+	"informes.h"
+	"parsers.h"
+
+1593614498 c:\users\pedro\desktop\utn\1_programacion y laboratorio i\2020\parciales\senerizsplab1\seneriz.splabi.1a\segudoparcial\informes.h
+
+1593614354 c:\users\pedro\desktop\utn\1_programacion y laboratorio i\2020\parciales\senerizsplab1\seneriz.splabi.1a\segudoparcial\parsers.h
+
+1593615364 source:c:\users\pedro\desktop\utn\1_programacion y laboratorio i\2020\parciales\senerizsplab1\seneriz.splabi.1a\segudoparcial\parsers.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"pais.h"
+	"LinkedList.h"
+	<string.h>
+
+1589037374 source:c:\users\pedro\desktop\utn\1_programacion y laboratorio i\2020\parciales\senerizsplab1\seneriz.splabi.1a\segudoparcial\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
 

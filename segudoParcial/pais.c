@@ -21,9 +21,12 @@ static int isValidName(char* cadena,int longitud)
     {
         for(i=0 ; cadena[i] != '\0' && i < longitud; i++)
         {
-            if((cadena[i] < 'A' || cadena[i] > 'Z' ) && (cadena[i] < 'a' || cadena[i] > 'z' ))
+            if(      (cadena[i] < 'A' || cadena[i] > 'Z' ) && (cadena[i] < 'a' || cadena[i] > 'z' )      )
             {
-                retorno = 0;
+                if( !(cadena[i] == ' '))
+                {
+                    retorno = 0;
+                }
                 break;
             }
         }
@@ -38,24 +41,45 @@ ePais* pais_new()
     return auxiliarP;
 }
 
-ePais* pais_newParametros(char* id,char* nombre,char* recuperados, char* infectados, char* muertos)
+ePais* pais_newParametros(char* idStr,char* nombreStr,char* recuperadosStr, char* infectadosStr, char* muertosStr)
 {
     ePais* this;
+    int id;
+    char nombre[20];
+    int recuperados;
+    int infectados;
+    int muertos;
 
-this = pais_new();
-    if(this != NULL && id != NULL && nombre != NULL && recuperados != NULL && infectados != NULL && muertos != NULL)
+    this = pais_new();
+    if(this != NULL && idStr != NULL && nombreStr != NULL && recuperadosStr != NULL && infectadosStr != NULL && muertosStr != NULL)
     {
-        this->id = atoi(id);
-        strcpy(this->nombre,nombre);
-        this->recuperados = atoi(recuperados);
-        this->infectados = atoi(infectados);
-        this->muertos = atoi(muertos);
+        id = atoi(idStr);
+        recuperados = atoi(recuperadosStr);
+        infectados = atoi(infectadosStr);
+        muertos = atoi(muertosStr);
+        strcpy(nombre,nombreStr);
+
+        /*
+                this->id = atoi(id);
+                strcpy(this->nombre,nombre);
+                this->recuperados = atoi(recuperados);
+                this->infectados = atoi(infectados);
+                this->muertos = atoi(muertos);
+        */
+
+        pais_setId(this,id);
+        pais_setRecuperados(this,recuperados);
+        pais_setInfectados(this,infectados);
+        pais_setMuertos(this,muertos);
+        pais_setNombre(this,nombre);
+
     }
+
     return this;
 }
 
 
-    /**SETTERS Y GETTERS*/
+/**SETTERS Y GETTERS*/
 
 int pais_setId(ePais* this,int id)
 {
@@ -103,10 +127,10 @@ int pais_setNombre(ePais* this,char* nombre)
     int retorno = -1;
     if(this != NULL && nombre != NULL)
     {
-        if(isValidName(nombre,128))
+        if(isValidName(nombre,25))
         {
             retorno = 0;
-            strncpy(this->nombre, nombre,128);
+            strncpy(this->nombre, nombre,25);
         }
     }
     return retorno;
@@ -179,7 +203,18 @@ int pais_getMuertos(ePais* this,int* muertos)
 
 void mostrarUnPais(ePais* pais)
 {
-    printf("%4d  %20s   %8d    %8d%  8d\n",pais->id, pais->nombre, pais->recuperados, pais->infectados, pais->muertos);
+    int id;
+    char nombre[20];
+    int recuperados;
+    int infectados;
+    int muertos;
+
+    pais_getId(pais,&id);
+    pais_getRecuperados(pais,&recuperados);
+    pais_getInfectados(pais,&infectados);
+    pais_getMuertos(pais,&muertos);
+    pais_getNombre(pais,nombre);
+    printf("%4d  %20s   %8d    %8d%  8d\n",id, nombre, recuperados, infectados, muertos);
 }
 
 /** \brief carga los datos de los elementos con los valores asignados
@@ -190,6 +225,11 @@ void mostrarUnPais(ePais* pais)
 void* cargaDatos(void* element )
 {
     ePais* retorno = element;
+    int id;
+    char nombre[20];
+    int infectados;
+    int recuperados;
+    int muertos;
 
     if(element != NULL)
     {
@@ -198,6 +238,7 @@ void* cargaDatos(void* element )
         retorno->infectados = rand()%(1960000)+40000;
         retorno->recuperados = rand()%(50000)+50000;
         retorno->muertos = rand()%(49000)+1000;
+
     }
     return retorno;
 }

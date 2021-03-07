@@ -31,7 +31,6 @@ int main()
         case 1:
             if(!carga)
             {
-                carga = 1;
                 utn_getNombre(nombreArchivo,20,"Ingrese el nombre del archivo .csv(sin extension) que quiere cargar: ","Archivo invalido\n",2);
                 if(nombreArchivo != NULL)
                 {
@@ -39,6 +38,7 @@ int main()
                     if(!controller_loadFromText(nombreArchivo,listaPaises))
                     {
                         printf("\nArchivo cargado con exito\n");
+                        carga = 1;
                     }
                     else
                     {
@@ -70,6 +70,10 @@ int main()
                     printf("\nSe cargaron los datos correctamente\n");
                 }
             }
+            else
+            {
+                printf("La lista esta vacia\n");
+            }
             break;
         case 4:
             if(!ll_isEmpty(listaPaises))
@@ -82,6 +86,10 @@ int main()
                         printf("Se guardaron los datos de paises exitosos en el archivo \"exitosos.csv\"\n");
                     }
                 }
+            }
+            else
+            {
+                printf("La lista esta vacia\n");
             }
 
             break;
@@ -101,17 +109,29 @@ int main()
                     printf("No hay paises en el horno\n");
                 }
             }
+            else
+            {
+                printf("La lista esta vacia\n");
+            }
             break;
         case 6:
             if(!ll_isEmpty(listaPaises) && !ll_sort(listaPaises,ordenarPorNivelDeInfeccion,1))
             {
                 printf("\nPaises ordenados por nivel de infeccion\n");
             }
+            else
+            {
+                printf("La lista esta vacia\n");
+            }
             break;
         case 7:
             if(!ll_isEmpty(listaPaises))
             {
                 paisConMayorNumeroDeMuertos(listaPaises,ordenarPorNivelDeMuertes);
+            }
+            else
+            {
+                printf("La lista esta vacia\n");
             }
             break;
         case 8:
